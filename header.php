@@ -18,14 +18,15 @@
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
         <?php 
           wp_nav_menu(array(
-            'menu' => 'sample',
-            'container' => 'ul',
-						'container_class'   => 'right hide-on-med-and-down',
-            'walker' => new WP_Materialize_Nav_Menu()
+            'menu'                  => 'sample',
+            'menu_class'          => 'right hide-on-med-and-down',
+            'container'             => '',
+            'walker'                => new WP_Materialize_Nav_Menu()
           )); 
         ?>
 
         <?php 
+        /*
           wp_nav_menu(array(
             'menu' => 'sample',
             'container' => 'ul',
@@ -33,12 +34,8 @@
 						'container_class' => 'side-nav',
             'walker' => new WP_Materialize_Nav_Menu()
           )); 
+          */
         ?>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  
-  <?php 
-    $navs = new Walker(); 
-    print_r($navs);
-  ?>
