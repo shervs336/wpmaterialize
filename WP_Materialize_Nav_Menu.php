@@ -15,7 +15,7 @@ class WP_Materialize_Nav_Menu extends Walker_Nav_Menu {
   
   public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-    $output .= "\n$indent<li role=\"link\" class=\"link\">\n";
+    $output .= "\n$indent<li>\n";
     $output .= $item->title;
     print_r($item);
   }
